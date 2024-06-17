@@ -1,0 +1,9 @@
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  padding: 16px 0;
+  flex-shrink: 0; /* Prevent the control from shrinking */
+}

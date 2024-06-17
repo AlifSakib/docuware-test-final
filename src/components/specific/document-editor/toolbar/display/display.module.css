@@ -1,0 +1,21 @@
+.display-options {
+  border-bottom: 1px solid #ccc;
+}
+
+.display-header {
+  font-size: 0.9em;
+  font-weight: normal;
+  margin-bottom: 10px;
+  background: gray;
+  padding: 3px 0;
+}
+
+.display-options-container {
+  display: flex;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.display-option {
+  cursor: pointer;
+}

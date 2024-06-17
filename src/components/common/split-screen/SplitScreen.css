@@ -1,0 +1,71 @@
+.split-screen {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative; /* Added to position secondary divider correctly */
+}
+
+.left-pane,
+.right-pane {
+  flex-grow: 1;
+  overflow-y: auto; /* Only allow vertical scrolling */
+}
+
+.left-pane {
+  background-color: #f0f0f0;
+  min-width: 300px; /* Prevents overflow */
+  width: 50%;
+}
+
+.right-pane {
+  background-color: #e0e0e0;
+  min-width: 0; /* Prevents overflow */
+  width: 50%;
+}
+
+.divider {
+  width: 10px;
+  background-color: #ccc;
+  cursor: e-resize;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0; /* Prevent the divider from shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider::before,
+.divider::after,
+.divider .middle-line {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  background-color: #000;
+  margin: 0.5px;
+}
+
+.secondary-divider {
+  width: 10px;
+  background-color: #2dc7e2; /* Different color for the secondary divider */
+  cursor: e-resize;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-divider::before,
+.secondary-divider::after,
+.secondary-divider .middle-line {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  background-color: #000;
+  margin: 0.5px;
+}
