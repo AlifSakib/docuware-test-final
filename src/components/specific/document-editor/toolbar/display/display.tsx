@@ -12,32 +12,27 @@ const Display = ({
   activeLayer,
 }: DisplayProps): JSX.Element => {
   return (
-    <div className={styles["display-options"]}>
+    <div className={`${styles["display-options "]}`}>
       <div className={styles["display-header"]}>
         <p>Display</p>
       </div>
       <div className={styles["display-options-container"]}>
         <button
           onClick={() => toggleLayer("layer1")}
-          style={{
-            backgroundColor: selectedLayers.includes("layer1")
-              ? "green"
-              : "red",
-            color: "white",
-          }}
+          className={`${styles.button} ${
+            selectedLayers.includes("layer1") ? styles.active : ""
+          }`}
         >
-          {activeLayer === "layer1" ? "🖊️ 1" : "1"}
+          {activeLayer === "layer1" ? "1🖊️" : "1"}
         </button>
+
         <button
           onClick={() => toggleLayer("layer2")}
-          style={{
-            backgroundColor: selectedLayers.includes("layer2")
-              ? "green"
-              : "red",
-            color: "white",
-          }}
+          className={`${styles.button} ${
+            selectedLayers.includes("layer2") ? styles.active : ""
+          }`}
         >
-          {activeLayer === "layer2" ? "🖊️ 2" : "2"}
+          {activeLayer === "layer2" ? "2🖊️" : "2"}
         </button>
       </div>
     </div>

@@ -48,16 +48,15 @@
 // export default SplitScreen;
 
 import React, { useRef, useState, useEffect } from "react";
-import "./SplitScreen.css";
+import "./VertialSplit.css";
 import DocumentEditor from "../../specific/document-editor";
-import DocumentTray from "../../specific/document-tray";
+import HorizontalSplit from "./horizontal-split";
 
-const SplitScreen: React.FC = () => {
+const VerticalSplit: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const leftPaneRef = useRef<HTMLDivElement>(null);
   const rightPaneRef = useRef<HTMLDivElement>(null);
   const secondaryDividerRef = useRef<HTMLDivElement>(null);
-
   const [dragging, setDragging] = useState(false);
 
   useEffect(() => {
@@ -116,7 +115,7 @@ const SplitScreen: React.FC = () => {
   return (
     <div className="split-screen" ref={containerRef}>
       <div className="left-pane" ref={leftPaneRef}>
-        <DocumentTray />
+        <HorizontalSplit />
       </div>
       <div className="divider" onMouseDown={handleMouseDown}>
         <span className="middle-line"></span>
@@ -133,4 +132,4 @@ const SplitScreen: React.FC = () => {
   );
 };
 
-export default SplitScreen;
+export default VerticalSplit;

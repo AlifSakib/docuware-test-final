@@ -4,7 +4,7 @@ import Display from "./display/display";
 import Navigations from "./navigation/navigation";
 import Overview from "./overview/overview";
 import Stamps from "./stamps/stamps";
-import "./styles.css";
+import styles from "./toolbar.module.css";
 
 interface ToolbarProps {
   toggleLayer: (layer: string) => void;
@@ -19,7 +19,7 @@ const Toolbar = ({
   activeLayer,
 }: ToolbarProps): JSX.Element => {
   return (
-    <div className="toolbar">
+    <div className={styles["toolbar"]}>
       {/* Navbigation */}
       <div>
         <Navigations />

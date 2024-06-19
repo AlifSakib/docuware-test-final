@@ -1,3 +1,13 @@
+.toolbar {
+  min-width: 105px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+}
+
 .display-options {
   border-bottom: 1px solid #ccc;
 }

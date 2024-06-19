@@ -1,9 +1,9 @@
-import SplitScreen from "./components/common/split-screen/split-screen";
-
+import VerticalSplit from "./components/common/split-screen/VertialSplit";
+import "./App.css";
 function App() {
   return (
     <>
-      <SplitScreen />
+      <VerticalSplit />
     </>
   );
 }
