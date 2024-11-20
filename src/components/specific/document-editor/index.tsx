@@ -20,6 +20,8 @@ const DocumentEditor = () => {
     layer2: [],
   });
 
+  console.log("arrows", arrows);
+
   const toggleLayer = (layer: string) => {
     setSelectedLayers((prevSelectedLayers) => {
       if (prevSelectedLayers.includes(layer)) {

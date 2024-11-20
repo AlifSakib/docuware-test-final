@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./HorizontalSplit.css";
-import DocumentTray from "../../specific/document-tray";
+import PrimaryDocumentTray from "../../specific/document-tray/primary-document-tray";
+import SecondaryDocumentTray from "../../specific/document-tray/secondary-document-tray";
 
 const HorizontalSplit: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -66,7 +67,7 @@ const HorizontalSplit: React.FC = () => {
   return (
     <div className="split-screen-horizontal" ref={containerRef}>
       <div className="top-pane" ref={topPaneRef}>
-        <DocumentTray />
+        <PrimaryDocumentTray />
       </div>
       <div className="horizontal-divider" onMouseDown={handleMouseDown}>
         <span className="middle-line-horizontal"></span>
@@ -77,7 +78,7 @@ const HorizontalSplit: React.FC = () => {
         </div>
       )}
       <div className="bottom-pane" ref={bottomPaneRef}>
-        <DocumentTray />
+        <SecondaryDocumentTray />
       </div>
     </div>
   );

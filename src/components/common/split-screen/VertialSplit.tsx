@@ -50,7 +50,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./VertialSplit.css";
 import DocumentEditor from "../../specific/document-editor";
-import HorizontalSplit from "./horizontal-split";
+import DocumentTray from "../../specific/document-tray";
 
 const VerticalSplit: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -115,7 +115,7 @@ const VerticalSplit: React.FC = () => {
   return (
     <div className="split-screen" ref={containerRef}>
       <div className="left-pane" ref={leftPaneRef}>
-        <HorizontalSplit />
+        <DocumentTray />
       </div>
       <div className="divider" onMouseDown={handleMouseDown}>
         <span className="middle-line"></span>

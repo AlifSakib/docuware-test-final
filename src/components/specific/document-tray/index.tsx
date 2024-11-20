@@ -1,17 +1,12 @@
-import styles from "./document-tray.module.css";
+import { useState } from "react";
+import HorizontalSplit from "../../common/split-screen/horizontal-split";
+import PrimaryDocumentTray from "./primary-document-tray";
 
 const DocumentTray = () => {
+  const [splitDocumentTray, setSplitDocumentTray] = useState(true);
   return (
     <div>
-      <nav className={styles["document-tray-nav"]}>
-        <div>Navbar</div>
-        <button>
-          <span>horizontal split</span>
-        </button>
-      </nav>
-      <div className={styles["document-tray-div"]}>
-        <p>Document Tray</p>
-      </div>
+      {splitDocumentTray ? <HorizontalSplit /> : <PrimaryDocumentTray />}
     </div>
   );
 };
